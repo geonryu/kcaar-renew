@@ -1,0 +1,83 @@
+/*
+font-set
+
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face{font-family:Pretendard;font-weight:900;font-display:swap;src:local('Pretendard Black'),url(../fonts/Pretendard-Black.woff2) format('woff2'),url(../fonts/Pretendard-Black.woff) format('woff')}
+@font-face{font-family:Pretendard;font-weight:800;font-display:swap;src:local('Pretendard ExtraBold'),url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'),url(../fonts/Pretendard-ExtraBold.woff) format('woff')}
+@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:local('Pretendard Bold'),url(../fonts/Pretendard-Bold.woff2) format('woff2'),url(../fonts/Pretendard-Bold.woff) format('woff')}
+@font-face{font-family:Pretendard;font-weight:600;font-display:swap;src:local('Pretendard SemiBold'),url(../fonts/Pretendard-SemiBold.woff2) format('woff2'),url(../fonts/Pretendard-SemiBold.woff) format('woff')}
+@font-face{font-family:Pretendard;font-weight:500;font-display:swap;src:local('Pretendard Medium'),url(../fonts/Pretendard-Medium.woff2) format('woff2'),url(../fonts/Pretendard-Medium.woff) format('woff')}
+@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:local('Pretendard Regular'),url(../fonts/Pretendard-Regular.woff2) format('woff2'),url(../fonts/Pretendard-Regular.woff) format('woff')}
+@font-face{font-family:Pretendard;font-weight:300;font-display:swap;src:local('Pretendard Light'),url(../fonts/Pretendard-Light.woff2) format('woff2'),url(../fonts/Pretendard-Light.woff) format('woff')}
+@font-face{font-family:Pretendard;font-weight:200;font-display:swap;src:local('Pretendard ExtraLight'),url(../fonts/Pretendard-ExtraLight.woff2) format('woff2'),url(../fonts/Pretendard-ExtraLight.woff) format('woff')}
+@font-face{font-family:Pretendard;font-weight:100;font-display:swap;src:local('Pretendard Thin'),url(../fonts/Pretendard-Thin.woff2) format('woff2'),url(../fonts/Pretendard-Thin.woff) format('woff')}
+
+*, :after, :before, ::after, ::before {box-sizing:border-box}
+* {margin:0; padding: 0; background-repeat: no-repeat; background-size: cover; background-position: center center;}
+body, html {height:100%; font-family: 'Pretendard'; font-weight: 400;}
+body {-webkit-font-smoothing:antialiased; line-height:1.5}
+canvas, img, picture, svg, video {display:block;max-width:100%}
+button, input, select, textarea {font:inherit; border: 0; background-color: transparent;}
+button{cursor: pointer;}
+h1, h2, h3, h4, h5, h6, p {overflow-wrap:break-word}
+#__next, #root {isolation:isolate}
+ul,ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{vertical-align: top; width: 100%;}
+
+input.ck{
+    overflow: hidden;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    background: transparent;
+    visibility: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+input.ck:checked+label::after{
+    border-color: #EB5602;
+}
+input.ck:checked+label{
+    color: #EB5602;
+}
+label.label-for-ck{
+    cursor: pointer;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+label.label-for-ck::after{
+    display: block;
+    border: 1px solid #ced4da;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg) translate(-7px, 1px);
+    -moz-transform: rotate(45deg) translate(-7px, 1px);
+    -ms-transform: rotate(45deg) translate(-7px, 1px);
+    transform: rotate(45deg) translate(-7px, 1px);
+    content: '';
+    width: 5px;
+    height: 10px;
+    box-sizing: content-box;
+}
+
+.divider-text{display: flex; width: 100%; align-items: center;}
+.divider-text::after,.divider-text::before{content: ''; display: block; width: 100%; height: 1px; background-color: #8A6652;}
+.divider-text span{display: block;}
+.message-warn{display: none;}
+.text-point{color: #EB5602;}
