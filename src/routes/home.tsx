@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { auth } from "../firebase";
 
 export default function Home() {
-    
     return (
         <div>
             <section className="main-visual py-5 overflow-hidden">
