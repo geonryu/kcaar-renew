@@ -14,16 +14,18 @@
     "crypto-js": "^4.2.0",
     "firebase": "^10.5.2",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
     "sass": "^1.69.5",
     "styled-components": "^6.0.7",
-    "styled-reset": "^4.5.1"
+    "styled-reset": "^4.5.1",
+    "swiper": "^11.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@types/styled-components": "^5.1.29",
+    "@types/styled-components": "^5.1.30",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
