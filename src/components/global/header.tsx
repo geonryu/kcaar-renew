@@ -11,7 +11,7 @@ const Header = styled.header`
     @media (min-width: 992px) {
         overflow: hidden;
 
-        &.active{height: 260px}
+        &.active{height: 330px}
         & .sub{
             display: block !important;
             height: unset;
@@ -49,7 +49,7 @@ const BtnNav = styled.div`
     & .navbar-toggler.active::after{top: calc(50% - 9px); transform: translate(-50%, 7px) rotate(45deg); transition: top 0.15s 0.0s, transform 0.15s 0.15s;}
 `;
 
-export default function GlovalHeader() {
+export default function GlobalHeader() {
     const [navBtn, setNavBtn] = useState(false);
     const onClickNavBtn = () => {
         !navBtn ? setNavBtn(true) : setNavBtn(false);

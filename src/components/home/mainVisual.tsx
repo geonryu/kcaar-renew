@@ -29,10 +29,11 @@ export default function MainVisual() {
                     loop={true}
                     slidesPerView={1}
                     modules={[Navigation]}
-                    className="overflow-hidden position-relative"
+                    className="overflow-visible position-relative"
                     speed={600}
+                    centeredSlides={true}
                     slideToClickedSlide={true}
-                    spaceBetween={30}
+                    spaceBetween={24}
                     navigation={
                         {
                             nextEl: ".nextBtn",
@@ -44,11 +45,6 @@ export default function MainVisual() {
                     //       slidesPerView: 3,
                     //       spaceBetween: 30,
                     //     },
-                    //     992: {
-                    //       slidesPerView: 4,
-                    //       spaceBetween: 30,
-                    //     },
-                    // }}
                 >
                     <SwiperSlide>
                         <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden">

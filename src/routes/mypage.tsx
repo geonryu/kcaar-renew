@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import LoginForm from "../components/auth/loginForm";
 import GlobalFooter from "../components/global/footer";
 import GlobalHeader from "../components/global/header";
+import { Container } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
 
 const Wrapper = styled.div`
     max-width: 1920px;
@@ -11,13 +12,15 @@ const Main = styled.main`
     padding-top: 65px;
 `;
 
-export default function Login() {
+export default function Mypage() {
     
     return (
         <Wrapper>
             <Main>
                 <GlobalHeader></GlobalHeader>
-                <LoginForm></LoginForm>
+                <Container>
+                    <Outlet></Outlet>
+                </Container>
                 <GlobalFooter></GlobalFooter>
             </Main> 
         </Wrapper>

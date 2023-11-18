@@ -28,7 +28,7 @@ const Navi = styled.div`
 const Gnb = styled.ul`
 
     @media (min-width: 992px) {
-        height: 260px; border: 0 !important;
+        height: 330px; border: 0 !important;
 
     }
 `;
@@ -71,37 +71,39 @@ const Arrow = styled.svg`
 export default function GlovalNavigation(props: any) {
     const [navStatus, SetNavStatus] = useState("");
     const [subStatus, SetSubStatus] = useState("");
-    const [user, setUser] = useState(null);
+    const user = auth.currentUser;
     const siteMap = [
         {
             title : {en: "Center", ko: "연구원소개", key: "nav1",}, 
             sub : [
-                {subtitle: "CEO Message", to: "/company/about", key: "nav1-1", ko: "인사의 글", ko2: null,},
-                {subtitle: "History", to: "/company/companyHistory", key: "nav1-2", ko: "조직도", ko2: null,},
-                {subtitle: "Location", to: "/company/location", key: "nav1-3", ko: "오시는 길", ko2: null,},
-                {subtitle: "Consultation", to: "/company/location", key: "nav1-4", ko: "접근성협의체", ko2: null,},
+                {subtitle: "CEO Message", to: "/center/ceomessage", key: "nav1-1", ko: "인사의 글", ko2: null,},
+                {subtitle: "Organization", to: "/center/organization", key: "nav1-2", ko: "조직도", ko2: null,},
+                {subtitle: "Location", to: "/center/location", key: "nav1-3", ko: "오시는 길", ko2: null,},
+                {subtitle: "Counsultation", to: "/center/counsultation", key: "nav1-4", ko: "접근성협의체", ko2: null,},
             ]
         },
         {
             title : {en: "Evaluation", ko: "접근성시험평가", key: "nav2",}, 
             sub : [
-                {subtitle: "Kiosk", to: "/product/clutchBrake", key: "nav2-1", ko: "키오스크", ko2: "접근성시험평가",},
-                {subtitle: "Appliances", to: "/product/windPower", key: "nav2-2", ko: "가전", ko2: "접근성시험평가",},
+                {subtitle: "Accessibility", to: "/evaluation/accessibility", key: "nav2-1", ko: "접근성시험평가란?", ko2: "",},
+                {subtitle: "Kiosk", to: "/evaluation/kiosk", key: "nav2-2", ko: "키오스크", ko2: "접근성시험평가",},
+                {subtitle: "Appliances", to: "/evaluation/appliance", key: "nav2-3", ko: "가전", ko2: "접근성시험평가",},
             ]
         },
         {
             title : {en: "Library", ko: "자료실", key: "nav3",}, 
             sub : [
-                {subtitle: "Notice", to: "/board/notice", key: "nav3-1", ko: "자료실", ko2: null,},
+                {subtitle: "Library", to: "/library", key: "nav3-1", ko: "자료실", ko2: null,},
             ]
         },
         {
-            title : {en: "CONTACT", ko: "문의하기", key: "nav4",}, 
+            title : {en: "Contact", ko: "문의하기", key: "nav4",}, 
             sub : [
-                {subtitle: "Contact", to: "/contact/contactus", key: "nav4-1", ko: "문의하기", ko2: null,},
+                {subtitle: "Contact", to: "/contact", key: "nav4-1", ko: "문의하기", ko2: null,},
             ]
         }
     ]
+    
     useEffect(() => {
         props.headerStatus ? SetNavStatus("active") : SetNavStatus("");
         
@@ -115,7 +117,7 @@ export default function GlovalNavigation(props: any) {
         // setUser(null);
     } 
 
-    const onClickSub = (e: React.MouseEvent<HTMLLIElement>) => {
+    const onClickSub = (e: React.MouseEvent<HTMLButtonElement>) => {
         const idx = e.currentTarget.getAttribute("data-idx");
         SetSubStatus(String(idx));
     }
@@ -125,6 +127,7 @@ export default function GlovalNavigation(props: any) {
     const onMouseLeave = () => {
         props.setHeaderStatus(false);
     }
+
     return (
         <Nav className={`ms-auto bg-wthie ${navStatus}`}>
             <Container className="d-lg-flex flex-lg-row-reverse align-items-center justify-content-between h-100">
@@ -133,17 +136,19 @@ export default function GlovalNavigation(props: any) {
                         user
                         ? 
                         <div className="user-welcome bg-blue-light bg-lg-none w-100 p-3 p-lg-0 rounded d-lg-flex">
-                            <div className="info mb-3 pb-3 mb-lg-0 pb-lg-0 border-bottom border-lg-bottom-0 d-flex align-items-end align-items-lg-center">
-                            <div className="msg">
-                                    <div className="welcome d-block d-lg-none">안녕하세요.</div>
-                                    <span className="user-name fs-5 fw-bold me-1 fs-lg-0" id="userNamePrint">유건</span>님
-                                </div>
-                                <div className="mypage fw-bold ms-auto mx-lg-3"><a href="#"><span className="material-symbols-outlined d-block text-gray-700">settings</span></a></div>
+                            <div>
+                                <Link to={"/mypage"} className="mb-3 pb-3 mb-lg-0 pb-lg-0 border-bottom border-lg-bottom-0 d-flex align-items-end align-items-lg-center">
+                                    <div className="msg">
+                                        <div className="welcome d-block d-lg-none">안녕하세요.</div>
+                                        <span className="user-name fs-5 fw-bold me-1 fs-lg-0" id="userNamePrint">{user.displayName}</span>님
+                                    </div>
+                                    <div className="mypage fw-bold ms-auto mx-lg-3 text-gray-600"><span className="material-symbols-outlined d-block ">settings</span></div>
+                                </Link>
                             </div>
-                            <div className="logout text-center text-lg-start text-gray-600"><input onClick={onClickToSignout} type="button" value="로그아웃" /></div>
+                            <div><input onClick={onClickToSignout} type="button" value="로그아웃" className="btn fs-6 btn-primary-blue w-100 d-block text-white fw-bold ms-lg-1 ms-xl-2 rounded"/></div>
                         </div>
                         :
-                        <div className="btn btn-primary-blue w-100 d-block text-white fw-bold ms-lg-1 ms-xl-2 rounded-pill"><a href="/login">로그인/회원가입</a></div>
+                        <div className="btn btn-primary-blue w-100 d-block text-white fw-bold ms-lg-1 ms-xl-2 rounded"><a href="/login">로그인/회원가입</a></div>
                     }
                 </Utils>
                 <Navi className="navigation h-100 border-top border-md-0">
@@ -162,9 +167,9 @@ export default function GlovalNavigation(props: any) {
                                         </button>
                                     </NavHd>
                                     <Sub className={`sub-nav ps-2 ps-lg-0 pt-2 fw-normal ${Number(subStatus) === i ? "active" : ""}`}>
-                                        {list.sub.map((item) => {
+                                        {list.sub.map((item, j) => {
                                             return (
-                                                <li className="sub-nav-link border-lg-bottom-0 mx-lg-1 mx-lg-2">
+                                                <li className="sub-nav-link border-lg-bottom-0 mx-lg-1 mx-lg-2" key={item.key+j}>
                                                     <Link to={item.to} className="d-block fw-bold text-gray-800 px-3 px-lg-0 py-3 py-sm-3">
                                                         <span>
                                                             {item.ko}

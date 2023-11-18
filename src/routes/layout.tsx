@@ -1,19 +1,23 @@
 import { Outlet } from "react-router-dom"
-import Footer from "../components/global/footer"
-import GlovalHeader from "../components/global/header"
 import styled from "styled-components"
+import GlobalFooter from "../components/global/footer";
+import GlobalHeader from "../components/global/header";
 
+const Wrapper = styled.div`
+    max-width: 1920px;
+    overflow: hidden;
+`;
 const Main = styled.main`
     padding-top: 65px;
 `;
 export default function Layout() {
     return (
-        <div>
-            <GlovalHeader></GlovalHeader>
+        <Wrapper>
+            <GlobalHeader></GlobalHeader>
             <Main>
                 <Outlet />
             </Main>
-            <Footer></Footer>
-        </div>
+            <GlobalFooter></GlobalFooter>
+        </Wrapper>
     )
 }
