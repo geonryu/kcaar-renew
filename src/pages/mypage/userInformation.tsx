@@ -1,15 +1,14 @@
 import styled from "styled-components";
-import MyInformation from "../../components/auth/mypage/myinformation";
+import {  Navigate, useLocation } from "react-router-dom";
 import MypageNavigation from "../../components/auth/mypage/mypage-navi";
-import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import MyInformation from "../../components/auth/mypage/myinformation";
 
 const Wrap = styled.div``;
 
 export default function UserInformation() {
-    const [isReauthenticated, setIsReauthenticated] = useState(false);
-
-    if(isReauthenticated) {
+    const { state } = useLocation();
+    
+    if(state) {
         return (
             <Wrap>
                 <MypageNavigation></MypageNavigation>
@@ -17,7 +16,6 @@ export default function UserInformation() {
             </Wrap>
         )
     } else {
-        
         return(
             <Navigate to="/mypage" />
         )

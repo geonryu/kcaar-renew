@@ -19,14 +19,12 @@ export default function ReCheckAuth() {
         e.preventDefault();
         const auth = getAuth();
         const user = auth.currentUser;
-        console.log(user);
         if (user) {
             const credentials = EmailAuthProvider.credential(user.email, password);
             
             try {
-                // Firebase에서 제공하는 reauthenticateWithCredential 메서드를 사용하여 비밀번호 재인증
                 await reauthenticateWithCredential(user, credentials);
-                console.log("인증완료!");
+                navigate("/mypage/myinformation", { state: true });
             } catch (err) {
                 setError("error");
             }

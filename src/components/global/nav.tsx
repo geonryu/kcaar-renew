@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { auth } from "../../firebase";
 import { Container } from "react-bootstrap";
@@ -71,7 +71,11 @@ const Arrow = styled.svg`
 export default function GlovalNavigation(props: any) {
     const [navStatus, SetNavStatus] = useState("");
     const [subStatus, SetSubStatus] = useState("");
-    const user = auth.currentUser;
+    const navigate = useNavigate();
+    const [user, setUser] = useState<any>(() => {
+        const storedData = localStorage.getItem('cur');
+        return storedData ? JSON.parse(storedData) : false;
+    });
     const siteMap = [
         {
             title : {en: "Center", ko: "연구원소개", key: "nav1",}, 
@@ -111,15 +115,20 @@ export default function GlovalNavigation(props: any) {
 
     const onClickToSignout = async () => {
         await auth.signOut();
-        // Navigate("/");
+        localStorage.removeItem("cur");
+        setUser(false);
+        navigate("/");
         // setNavExtend(false);
         // setSubNavExtend(false);
-        // setUser(null);
     } 
 
     const onClickSub = (e: React.MouseEvent<HTMLButtonElement>) => {
+        props.setHeaderStatus(true);
         const idx = e.currentTarget.getAttribute("data-idx");
         SetSubStatus(String(idx));
+    }
+    const onClickToRedirect = () => {
+        props.setHeaderStatus(false);
     }
     const onMouseEnter = () => {
         props.setHeaderStatus(true);
@@ -136,7 +145,7 @@ export default function GlovalNavigation(props: any) {
                         user
                         ? 
                         <div className="user-welcome bg-blue-light bg-lg-none w-100 p-3 p-lg-0 rounded d-lg-flex">
-                            <div>
+                            <div className="d-flex align-items-center">
                                 <Link to={"/mypage"} className="mb-3 pb-3 mb-lg-0 pb-lg-0 border-bottom border-lg-bottom-0 d-flex align-items-end align-items-lg-center">
                                     <div className="msg">
                                         <div className="welcome d-block d-lg-none">안녕하세요.</div>
@@ -148,7 +157,7 @@ export default function GlovalNavigation(props: any) {
                             <div><input onClick={onClickToSignout} type="button" value="로그아웃" className="btn fs-6 btn-primary-blue w-100 d-block text-white fw-bold ms-lg-1 ms-xl-2 rounded"/></div>
                         </div>
                         :
-                        <div className="btn btn-primary-blue w-100 d-block text-white fw-bold ms-lg-1 ms-xl-2 rounded"><a href="/login">로그인/회원가입</a></div>
+                        <div onClick={onClickToRedirect} className="btn btn-primary-blue w-100 d-block text-white fw-bold ms-lg-1 ms-xl-2 rounded fs-6"><a href="/login">로그인/회원가입</a></div>
                     }
                 </Utils>
                 <Navi className="navigation h-100 border-top border-md-0">
@@ -170,7 +179,7 @@ export default function GlovalNavigation(props: any) {
                                         {list.sub.map((item, j) => {
                                             return (
                                                 <li className="sub-nav-link border-lg-bottom-0 mx-lg-1 mx-lg-2" key={item.key+j}>
-                                                    <Link to={item.to} className="d-block fw-bold text-gray-800 px-3 px-lg-0 py-3 py-sm-3">
+                                                    <Link onClick={onClickToRedirect} to={item.to} className="d-block fw-bold text-gray-800 px-3 px-lg-0 py-3 py-sm-3">
                                                         <span>
                                                             {item.ko}
                                                             {item.ko2 ? <br className="d-none d-md-block"/> : ""}

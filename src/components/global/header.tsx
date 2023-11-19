@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import GlovalNavigation from "./nav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -49,7 +49,7 @@ const BtnNav = styled.div`
     & .navbar-toggler.active::after{top: calc(50% - 9px); transform: translate(-50%, 7px) rotate(45deg); transition: top 0.15s 0.0s, transform 0.15s 0.15s;}
 `;
 
-export default function GlobalHeader() {
+export default function GlobalHeader(props: any) {
     const [navBtn, setNavBtn] = useState(false);
     const onClickNavBtn = () => {
         !navBtn ? setNavBtn(true) : setNavBtn(false);

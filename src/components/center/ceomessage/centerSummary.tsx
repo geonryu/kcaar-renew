@@ -2,10 +2,13 @@ import { Accordion, AccordionHeader, AccordionItem, Col, Container, Row } from "
 import styled from "styled-components";
 import Heading from "../../global/heading";
 import AccordionBody from "react-bootstrap/esm/AccordionBody";
+import { auth } from "../../../firebase";
 
 const Section = styled.section``;
 
 export default function CenterSummary() {
+    const user = auth.currentUser;
+    console.log(user);
     return (
         <Section className="py-5 bg-blue-light">
             <Container>

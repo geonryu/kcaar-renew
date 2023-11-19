@@ -17,6 +17,14 @@ import UserInformation from "./pages/mypage/userInformation";
 import QNA from "./pages/mypage/qna";
 import MypageAuth from "./pages/mypage/mypage-auth";
 import Mypage from "./routes/mypage";
+import ProtectedRoute from "./components/auth/protectedRoute";
+import InquiryPost from "./components/cs/inquiryPost";
+import Admin from "./routes/admin";
+import AdminHome from "./pages/admin";
+import Members from "./components/admin/members";
+import InquiryManage from "./components/admin/inquiryAdmin";
+import LibraryManage from "./components/admin/libraryAdmin";
+import LibraryPost from "./components/admin/libraryPost";
 
 const router = createBrowserRouter([
     {
@@ -70,8 +78,17 @@ const router = createBrowserRouter([
                 element: <Library />,
             },
             {
-                path:"/contact", 
-                element: <Contact />,
+                path:"/", 
+                children: [
+                    {
+                        path: "/contact",
+                        element: <Contact />
+                    },
+                    {
+                        path: "/contact/post",
+                        element: <InquiryPost />
+                    },
+                ]
             },
         ]
     },
@@ -85,7 +102,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/mypage",
-        element: <Mypage />,
+        element: <ProtectedRoute><Mypage /></ProtectedRoute>,
         children: [
             {
                 path: "/mypage",
@@ -101,6 +118,28 @@ const router = createBrowserRouter([
             },
         ]
     },
+    {
+        path: "/admin",
+        element: <Admin><AdminHome /></Admin>,
+        children: [
+            {
+                path: "/admin/members",
+                element: <Members />
+            },
+            {
+                path: "/admin/inquiryManagement",
+                element: <InquiryManage />
+            },
+            {
+                path: "/admin/libraryManagement",
+                element: <LibraryManage />
+            },
+            {
+                path: "/admin/libraryManagement/libraryPost",
+                element: <LibraryPost />
+            }
+        ]
+    }
   ]);
 
   const GlobalStyles = createGlobalStyle`
