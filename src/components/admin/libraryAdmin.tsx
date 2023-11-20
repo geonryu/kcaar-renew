@@ -1,4 +1,4 @@
-import { Col, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styled from "styled-components"
 import Heading from "../global/heading";
 import { Link } from "react-router-dom";
@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Section = styled.section``;
 const Board = styled.div``;
 const Lists = styled.div``;
-const List = styled.div``;
 const PostBtn = styled.div``;
 
 

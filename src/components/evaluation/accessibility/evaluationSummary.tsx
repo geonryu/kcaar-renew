@@ -1,7 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import Heading from "../../global/heading";
-import { Link } from "react-router-dom";
 
 const Section = styled.section``;
 const Box = styled.div`

@@ -1,9 +1,9 @@
 import { Navigate } from "react-router-dom";
 import { db } from "../firebase";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
-export default function Admin({children} : {children:React.ReactNode}) {
+export default function AdminProtect({children} : {children:React.ReactNode}) {
     const [perm, setPerm] = useState<any>(false);
     const user = useState<any>(() => {
         const storedData = localStorage.getItem('cur');
@@ -23,12 +23,13 @@ export default function Admin({children} : {children:React.ReactNode}) {
             console.error('Permission denied');
         } finally {
             console.log(perm);
-            if(!perm || !user) {
-                return <Navigate to="/" />
-            }
             
-            return children;
         }
     }
     fetchUser();
+    if(!perm || !user) {
+        return <Navigate to="/" />
+    }
+    
+    return children;
 }

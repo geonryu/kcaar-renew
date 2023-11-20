@@ -1,24 +1,21 @@
 
 import styled from "styled-components";
 import Heading from "../../global/heading";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { auth, db } from "../../../firebase";
-import { updateProfile } from "firebase/auth";
-import { collection, doc, getDoc, getDocs, query, setDoc, updateDoc, where } from "firebase/firestore";
-const user = auth.currentUser;
+import { collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
 
 const Section = styled.section``;
 
 export default function MyInformation() {
     const [userData, setUserData] = useState<any | null>(null);
-    const [isLoading, setLoading] = useState(false);
+    const [isLoading] = useState(false);
     const [allowAll, setAllowAll] = useState(false)
     const [allowService, setAllowService] = useState(false);
     const [allowPriv, setAllowPriv] = useState(false);
     const [allowOpt, setAllowOpt] = useState(false);
     const [error, setError] = useState("");
-    const user = auth.currentUser;
+    const user: any = auth.currentUser;
 
     useEffect(() => {
         if(allowService && allowPriv && allowOpt) {

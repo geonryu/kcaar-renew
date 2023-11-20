@@ -43,7 +43,7 @@ export default function InquiryBoard() {
             );
     
             unsubscribe = await onSnapshot(boardQuery, (snapshot) => {
-                const boardData = snapshot.docs.map((doc) => {
+                const boardData:any = snapshot.docs.map((doc) => {
                     const { id, createdAt, tit, content, attached, attachedName, email, phoneNum, writer, writerId } = doc.data()
                     return {
                         id, createdAt, tit, content, attached, attachedName, email, phoneNum, writer, writerId
@@ -72,7 +72,7 @@ export default function InquiryBoard() {
                 <Board className="border-top border-bottom">
                     <Lists>
                         {
-                            boardList.map((list, i) => {
+                            boardList.map((list) => {
                                 const crtAt = new Date(list.createdAt);
                                 
                                 return (

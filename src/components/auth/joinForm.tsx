@@ -27,7 +27,7 @@ export default function JoinForm() {
     const [ckLen, setCkLen] = useState("");
     const [ckPw, setCkPw] = useState("true");
     const [cert, setCert] = useState("false");//인증버튼 제어
-    const [flag, setFlag] = useState(true);
+    const [flag] = useState(true);
     const [certResult, setCertResult] = useState(false);
     const [certError, setCertError] = useState(false);
     const [emailVerifiedStatus, setEmailVerifiedStatus] = useState(false);
@@ -129,7 +129,7 @@ export default function JoinForm() {
         }
     }
 
-    const onClickToCert = async (e : React.MouseEvent<HTMLInputElement>) => {
+    const onClickToCert = async () => {
         const temporalPassword = Math.random().toString(36);
         try{
             const credentials = await createUserWithEmailAndPassword(auth, email, temporalPassword);

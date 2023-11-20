@@ -49,7 +49,7 @@ export default function LibraryPost() {
         setIsPop(!isPop);
     }
 
-    const handleSelect = (e : React.ChangeEvent<HTMLButtonElement>) => {
+    const handleSelect = (e : React.MouseEvent<HTMLButtonElement>) => {
         const idx = Number(e.currentTarget.getAttribute("data-idx"));
         const val = e.currentTarget.value;
         setSelectedIndex(idx);
@@ -87,10 +87,6 @@ export default function LibraryPost() {
                 setFileName(files[0].name);
             }
         } 
-    }
-
-    const onFocus = () => {
-
     }
 
     const onSubmit = async(e:React.FormEvent<HTMLFormElement>) => {

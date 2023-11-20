@@ -19,12 +19,12 @@ import MypageAuth from "./pages/mypage/mypage-auth";
 import Mypage from "./routes/mypage";
 import ProtectedRoute from "./components/auth/protectedRoute";
 import InquiryPost from "./components/cs/inquiryPost";
-import Admin from "./routes/admin";
 import AdminHome from "./pages/admin";
 import Members from "./components/admin/members";
 import InquiryManage from "./components/admin/inquiryAdmin";
 import LibraryManage from "./components/admin/libraryAdmin";
 import LibraryPost from "./components/admin/libraryPost";
+import AdminProtect from "./routes/admin";
 
 const router = createBrowserRouter([
     {
@@ -120,7 +120,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/admin",
-        element: <Admin><AdminHome /></Admin>,
+        element: <AdminProtect><AdminHome /></AdminProtect>,
         children: [
             {
                 path: "/admin/members",

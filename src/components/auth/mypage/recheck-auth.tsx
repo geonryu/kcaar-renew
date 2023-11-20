@@ -18,7 +18,7 @@ export default function ReCheckAuth() {
     const handleReauthentication = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const auth = getAuth();
-        const user = auth.currentUser;
+        const user:any = auth.currentUser;
         if (user) {
             const credentials = EmailAuthProvider.credential(user.email, password);
             

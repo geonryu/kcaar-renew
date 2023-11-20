@@ -5,6 +5,7 @@ import GlobalHeader from "../components/global/header";
 
 const Wrapper = styled.div`
     max-width: 1920px;
+    margin: 0 auto;
     overflow: hidden;
 `;
 const Main = styled.main`

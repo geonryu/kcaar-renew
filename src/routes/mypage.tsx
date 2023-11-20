@@ -6,6 +6,7 @@ import { Outlet } from "react-router-dom";
 
 const Wrapper = styled.div`
     max-width: 1920px;
+    margin: 0 auto;
     overflow: hidden;
 `;
 const Main = styled.main`
