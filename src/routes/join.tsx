@@ -5,6 +5,7 @@ import JoinForm from "../components/auth/joinForm";
 
 const Wrapper = styled.div`
     max-width: 1920px;
+    margin: 0 auto;
     overflow: hidden;
 `;
 const Main = styled.main`
