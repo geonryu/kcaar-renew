@@ -5,6 +5,7 @@ import { useState } from "react";
 import { auth, db, storage } from "../../firebase";
 import { addDoc, collection, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { useNavigate } from "react-router-dom";
 
 const Section = styled.section``;
 
@@ -47,6 +48,7 @@ export default function InquiryPost() {
     const [content, setContent] = useState("");
     const [file, setFile] = useState<File | null>(null);//File이거나 Null
     const [fileName, setFileName] = useState("");
+    const navigate = useNavigate();
 
     const handlePop = () => {
         setIsPop(!isPop);
@@ -107,6 +109,7 @@ export default function InquiryPost() {
                 tit : tit,
                 content : content,
                 createdAt : Date.now(),
+                ans : "" 
             }); //db 저장
             await updateDoc(doc, {
                 id: doc.id
@@ -124,6 +127,7 @@ export default function InquiryPost() {
         } catch(e) {
             console.log(e);
         } finally {
+            navigate("/contact");
         }
     }
 
@@ -145,7 +149,7 @@ export default function InquiryPost() {
                     <Input onChange={onChangeInput} placeholder="제목을 입력해주세요." name="tit" type="text" className="border rounded w-100 px-2 py-1 mt-3"/>
                     <Textarea onFocus={onFocusedTextarea} placeholder="문의하실 내용을 작성해주세요." onChange={onChangeTextarea} className="border rounded w-100 mt-3 p-2" name="content" rows={10}></Textarea>
                     <div className="d-flex mt-3">
-                        <input className="border rounded col d-block px-2 py-1" type="text" readOnly value={fileName !== "" ? fileName : ""} />
+                        <input className="border rounded col d-block px-2 py-1 fs-6 text-gray-600" type="text" readOnly value={fileName !== "" ? fileName : "파일은 최대 10MB까지 업로드 하실 수 있습니다."} />
                         <AttachFileButton className="btn border fw-bold d-block ms-2" htmlFor="file">파일첨부</AttachFileButton>
                         <AttachFileInput
                             onChange={onFileChange}

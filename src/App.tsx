@@ -25,6 +25,10 @@ import InquiryManage from "./components/admin/inquiryAdmin";
 import LibraryManage from "./components/admin/libraryAdmin";
 import LibraryPost from "./components/admin/libraryPost";
 import AdminProtect from "./routes/admin";
+import ForgotId from "./routes/forgotId";
+import ForgotPassword from "./routes/forgotPw";
+import BannerManage from "./components/admin/bannerAdmin";
+import Report from "./components/admin/reportAdmin";
 
 const router = createBrowserRouter([
     {
@@ -86,7 +90,7 @@ const router = createBrowserRouter([
                     },
                     {
                         path: "/contact/post",
-                        element: <InquiryPost />
+                        element: <ProtectedRoute><InquiryPost /></ProtectedRoute>
                     },
                 ]
             },
@@ -99,6 +103,14 @@ const router = createBrowserRouter([
     {
         path: "/join",
         element: <Join />
+    },
+    {
+        path: "/forgotId",
+        element: <ForgotId />
+    },
+    {
+        path: "/forgotPassword",
+        element: <ForgotPassword />
     },
     {
         path: "/mypage",
@@ -137,6 +149,14 @@ const router = createBrowserRouter([
             {
                 path: "/admin/libraryManagement/libraryPost",
                 element: <LibraryPost />
+            },
+            {
+                path: "/admin/bannerManagement",
+                element: <BannerManage />
+            },
+            {
+                path: "/admin/report",
+                element: <Report />
             }
         ]
     }

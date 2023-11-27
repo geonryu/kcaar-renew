@@ -10,7 +10,7 @@ export default function MoreInformation() {
             <Container className="d-flex justify-content-between">
                 <Row>
                     <Col xs={12} md={4} className="mb-3 mb-md-0">
-                        <Link to={"/"} className="bg-white h-100 p-3 rounded-4 d-flex flex-column">
+                        <Link to={"/evaluation/accessibility"} className="bg-white h-100 p-3 rounded-4 d-flex flex-column">
                             <div className="fs-5 fw-bold mb-3">
                                 <span className="fs-6 d-block text-primary">Evaluation</span>
                                 접근성시험평가 안내
@@ -24,7 +24,7 @@ export default function MoreInformation() {
                         </Link>
                     </Col>
                     <Col xs={12} md={4} className="mb-3 mb-md-0">
-                        <Link to={"/"} className="bg-white h-100 p-3 rounded-4 d-flex flex-column">
+                        <Link to={"/contact"} className="bg-white h-100 p-3 rounded-4 d-flex flex-column">
                             <div className="fs-5 fw-bold mb-3">
                                 <span className="fs-6 d-block text-primary">Evaluation</span>
                                 <div>이용 및 의뢰 문의</div>
@@ -38,7 +38,7 @@ export default function MoreInformation() {
                         </Link>
                     </Col>
                     <Col xs={12} md={4} className="">
-                        <Link to={"/"} className="bg-white h-100 p-3 rounded-4 d-flex flex-column">
+                        <Link to={"/center/location"} className="bg-white h-100 p-3 rounded-4 d-flex flex-column">
                             <div className="fs-5 fw-bold mb-3">
                                 <span className="fs-6 d-block text-primary">Evaluation</span>
                                 <div>오시는 길</div>

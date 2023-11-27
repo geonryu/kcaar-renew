@@ -66,7 +66,7 @@ export default function LoginForm() {
                     </div>
                     <div className="forgot d-flex justify-content-center border-top pt-3">
                         <div className="forgot-id fs-6 mx-3 link-gray-900"><a href="/forgotId">{"아이디 (이메일) 찾기"}</a></div> 
-                        <div className="forgot-pw fs-6 mx-3 link-gray-900"><a href="#">비밀번호 찾기</a></div>
+                        <div className="forgot-pw fs-6 mx-3 link-gray-900"><a href="/forgotPassword">비밀번호 찾기</a></div>
                     </div>
                 </div>
             </div>
