@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function ProtectedRoute({children} : {children:React.ReactNode}) {
     const [user] = useState<any>(() => {
-        const storedData = localStorage.getItem('cur');
+        const storedData = localStorage.getItem('user');
         return storedData ? JSON.parse(storedData) : false;
     });
     

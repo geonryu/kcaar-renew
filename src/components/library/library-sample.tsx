@@ -1,13 +1,9 @@
 import styled from "styled-components";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Heading from "../global/heading";
 
 
 const Section = styled.section``;
-const Board = styled.div``;
-const List = styled.div`
-    margin-bottom: 24px;
-`;
 const Thumbnail = styled.div`
     position: relative;
     & img{
@@ -41,8 +37,8 @@ export default function LibrarySample() {
         <Section className="py-5">
             <Container>
                 <Heading labelTxt={"NEWS & NOTICE"} titTxt1={`한국접근성평가연구원의 소식`} titTxt2={""} txtAlign={"center"}/>
-                <Board className="d-flex flex-wrap justify-content-between">
-                    <List className="col col-2 col-md-3 col-lg-4">
+                <Row>
+                    <Col xs={6} sm={6} md={4} lg={3} className="mb-3">
                         <div className="border rounded-4 p-2">
                             <a href="https://www.segye.com/newsView/20230702509737?OutUrl=naver" target="_blank">
                                 <Thumbnail>
@@ -53,8 +49,8 @@ export default function LibrarySample() {
                                 <div className="date fs-6 fw-bold text-gray-600">2023-07-02</div>
                             </a>
                         </div>
-                    </List>
-                    <List className="col col-2 col-md-3 col-lg-4">
+                    </Col>
+                    <Col xs={6} sm={6} md={4} lg={3} className="mb-3">
                         <div className="border rounded-4 p-2">
                             <a href="https://live.lge.co.kr/2306-universal-design/" target="_blank">
                                 <Thumbnail>
@@ -65,8 +61,8 @@ export default function LibrarySample() {
                                 <div className="date fs-6 fw-bold text-gray-600">2023-06-07</div>
                             </a>
                         </div>
-                    </List>
-                    <List className="col col-2 col-md-3 col-lg-4">
+                    </Col>
+                    <Col xs={6} sm={6} md={4} lg={3} className="mb-3">
                         <div className="border rounded-4 p-2">
                             <a href="https://www.yna.co.kr/view/AKR20230627084700017?input=1195m" target="_blank">
                                 <Thumbnail>
@@ -77,8 +73,8 @@ export default function LibrarySample() {
                                 <div className="date fs-6 fw-bold text-gray-600">2023-06-27</div>
                             </a>
                         </div>
-                    </List>
-                    <List className="col col-2 col-md-3 col-lg-4">
+                    </Col>
+                    <Col xs={6} sm={6} md={4} lg={3} className="mb-3">
                         <div className="border rounded-4 p-2">
                             <a href="https://newsis.com/view/?id=NISX20230620_0002345237&cID=10201&pID=10200" target="_blank">
                                 <Thumbnail>
@@ -89,8 +85,8 @@ export default function LibrarySample() {
                                 <div className="date fs-6 fw-bold text-gray-600">2023-06-20</div>
                             </a>
                         </div>
-                    </List>
-                    <List className="col col-2 col-md-3 col-lg-4">
+                    </Col>
+                    <Col xs={6} sm={6} md={4} lg={3} className="mb-3">
                         <div className="border rounded-4 p-2">
                             <a href="https://bravo.etoday.co.kr/view/atc_view/14540" target="_blank">
                                 <Thumbnail>
@@ -101,8 +97,8 @@ export default function LibrarySample() {
                                 <div className="date fs-6 fw-bold text-gray-600">2023-05-04</div>
                             </a>
                         </div>
-                    </List>
-                    <List className="col col-2 col-md-3 col-lg-4">
+                    </Col>
+                    <Col xs={6} sm={6} md={4} lg={3} className="mb-3">
                         <div className="border rounded-4 p-2">
                             <a href="https://www.donga.com/news/It/article/all/20230216/117921271/1" target="_blank">
                                 <Thumbnail>
@@ -113,8 +109,8 @@ export default function LibrarySample() {
                                 <div className="date fs-6 fw-bold text-gray-600">2023-02-16</div>
                             </a>
                         </div>
-                    </List>
-                    <List className="col col-2 col-md-3 col-lg-4">
+                    </Col>
+                    <Col xs={6} sm={6} md={4} lg={3} className="mb-3">
                         <div className="border rounded-4 p-2">
                             <a href="https://newsis.com/view/?id=NISX20221125_0002100793&cID=13005&pID=13100" target="_blank">
                                 <Thumbnail>
@@ -125,8 +121,8 @@ export default function LibrarySample() {
                                 <div className="date fs-6 fw-bold text-gray-600">2022-11-25</div>
                             </a>
                         </div>
-                    </List>
-                </Board>
+                    </Col>
+                </Row>
             </Container>
         </Section>
     )
