@@ -34,7 +34,7 @@ export default function LoginForm() {
             setLoading(true);
             await signInWithEmailAndPassword(auth, email, password);
             const user = auth.currentUser;
-            localStorage.setItem('cur', JSON.stringify(user));
+            localStorage.setItem('user', JSON.stringify(user));
             navigate("/");
         } catch(e:any) {
             if(e instanceof FirebaseError) {

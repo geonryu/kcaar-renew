@@ -42,7 +42,7 @@ export default function InquiryBoard() {
     const [perm, setPerm] = useState(false);
 
     const user = useState<any>(() => {
-        const storedData = localStorage.getItem('cur');
+        const storedData = localStorage.getItem('user');
         return storedData ? JSON.parse(storedData) : false;
     });
     
@@ -77,7 +77,6 @@ export default function InquiryBoard() {
 
         setViewMore(idx);
         setEdit(false);
-
         if(user[0].uid === boardList[idx].writerId){
             setPerm(true);
         } else {

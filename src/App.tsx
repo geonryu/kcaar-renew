@@ -118,15 +118,15 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/mypage",
-                element: <MypageAuth />
+                element: <ProtectedRoute><MypageAuth /></ProtectedRoute>
             },
             {
                 path: "/mypage/myInformation",
-                element: <UserInformation />
+                element: <ProtectedRoute><UserInformation /></ProtectedRoute>
             },
             {
                 path: "/mypage/qna",
-                element: <QNA />
+                element: <ProtectedRoute><QNA /></ProtectedRoute>
             },
         ]
     },

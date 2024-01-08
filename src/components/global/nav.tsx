@@ -73,7 +73,7 @@ export default function GlovalNavigation(props: any) {
     const [subStatus, SetSubStatus] = useState("");
     const navigate = useNavigate();
     const [user, setUser] = useState<any>(() => {
-        const storedData = localStorage.getItem('cur');
+        const storedData = localStorage.getItem('user');
         return storedData ? JSON.parse(storedData) : false;
     });
     const siteMap = [
@@ -106,16 +106,14 @@ export default function GlovalNavigation(props: any) {
                 {subtitle: "Contact", to: "/contact", key: "nav4-1", ko: "문의하기", ko2: null,},
             ]
         }
-    ]
-    
+    ];
     useEffect(() => {
         props.headerStatus ? SetNavStatus("active") : SetNavStatus("");
-        
     }, [props.headerStatus]);
 
     const onClickToSignout = async () => {
         await auth.signOut();
-        localStorage.removeItem("cur");
+        localStorage.removeItem("user");
         setUser(false);
         navigate("/");
         // setNavExtend(false);

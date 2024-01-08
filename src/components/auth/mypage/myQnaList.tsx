@@ -38,7 +38,7 @@ export default function MyQnAList() {
     const navigate = useNavigate();
 
     const user = useState<any>(() => {
-        const storedData = localStorage.getItem('cur');
+        const storedData = localStorage.getItem('user');
         return storedData ? JSON.parse(storedData) : false;
     });
 
