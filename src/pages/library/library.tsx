@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import LibrarySample from "../../components/library/library-sample";
+import Libraries from "../../components/library/libraries";
 
 const Wrap = styled.div``;
 
 export default function Library() {
     return (
         <Wrap>
-            <LibrarySample></LibrarySample>
+            {/* <LibrarySample></LibrarySample> */}
+            <Libraries></Libraries>
         </Wrap>
     )
 }

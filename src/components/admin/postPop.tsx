@@ -120,9 +120,10 @@ export default function PostPop(props: any) {
     }
     const onSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const user = auth.currentUser;
+        const user = localStorage.getItem("user") || "null";
+        const obj = JSON.parse(user);
         const isReg = confirm("등록하시겠습니까?");
-        if(!user || !isReg) return
+        if(!obj || !isReg) return
         if(!categories) {alert("카테고리를 선택해주세요."); return};
         if(createdAt === 0) {alert("작성일을 입력해주세요."); return};
         if(!tit) {alert("제목을 입력해주세요"); return};
@@ -130,8 +131,8 @@ export default function PostPop(props: any) {
         try {
             const doc = await addDoc(collection(db, "library"), {
                 category: seletedValue,
-                writer : user.displayName,
-                writerId : user.uid,
+                writer : obj.displayName,
+                writerId : obj.uid,
                 tit : tit,
                 content : content,
                 realCreatedAt : Date.now(),

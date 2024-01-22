@@ -88,10 +88,8 @@ export default function LibraryPost() {
             }
         } 
     }
-
     const onSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         const user = auth.currentUser;
         if(!user) return;
         try {

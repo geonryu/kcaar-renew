@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import LocalNavigation from "../../components/global/localnavigation";
+import KioskProcess from "../../components/evaluation/kiosk/kioskProcess";
 
 const Wrap = styled.div``;
 
@@ -13,7 +14,7 @@ export default function KioskEval() {
                     {"tit" : "가전접근성시험평가", "to" : "/evaluation/appliance", "isActive": "false", "key": "appliance" },
                 ]}
             ></LocalNavigation>
-            
+            <KioskProcess></KioskProcess>
         </Wrap>
     )
 }
