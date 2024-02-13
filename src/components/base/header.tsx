@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import { User } from "firebase/auth";
 
 export default function Header() {
     const navigate = useNavigate(); 
-
     const [navExtend, setNavExtend] = useState(false);
     const [subNavExtend, setSubNavExtend] = useState(false);
     const [viewSub, setViewSub] = useState("연구원 소개");    
     
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState<User | null>(null);
     useEffect(() => {
-        console.log(auth.currentUser);
-        if (auth.currentUser) {
-            setUser(auth.currentUser);
-        } else {
-            setUser(null);
-        }
-    }, [user]);
+        const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+            setUser(currentUser);
+        });
+    
+        return () => unsubscribe();
+    }, []); // 의존성 배열을 빈 배열로 설정하여 컴포넌트가 마운트될 때만 실행되도록 함
+    
 
     const onClickToSignout = async () => {
         await auth.signOut();
@@ -36,9 +36,9 @@ export default function Header() {
     const onNavOut = () => {
         setSubNavExtend(false);
     }
-    const onViewSub = (e : React.MouseEventHandler<HTMLButtonElement>) => {
-        setViewSub(e.target.innerText);
-    }
+    const onViewSub: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+        setViewSub(e.currentTarget.innerText);
+    };
     return (
         <header className={`header bg-primary-white border-bottom fixed-top ${navExtend ? "opn" : ""} ${subNavExtend ? "extend" : ""}`}>
             <nav className="navbar navbar-expand-lg navbar-light h-100">

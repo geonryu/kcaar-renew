@@ -69,6 +69,16 @@ export default function NoticeSlider() {
                     }}
                 >
                     <SwiperSlide className="border rounded-4 p-2">
+                        <a href="http://sisatoday.co.kr/m/board/magazine_m.php?board=today2&code=read&page=&uid=80673&m_code=" target="_blank">
+                            <Thumbnail>
+                                <div className="tag fs-6">보도자료</div>
+                                <img src="http://sisatoday.co.kr/board/DATA/170622833316.jpg" alt="성균관대 시스템경영공학과 이성일교수" />
+                            </Thumbnail>
+                            <Title className="tit my-2">‘디지털 약자’를 위한 정보화기기 접근성 개선에 역량 집중</Title>
+                            <div className="date fs-6 fw-bold text-gray-600">2024-01-26</div>
+                        </a>
+                    </SwiperSlide>
+                    <SwiperSlide className="border rounded-4 p-2">
                         <a href="https://www.segye.com/newsView/20230702509737?OutUrl=naver" target="_blank">
                             <Thumbnail>
                                 <div className="tag fs-6">보도자료</div>

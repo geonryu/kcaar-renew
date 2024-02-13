@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Badge, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styled from "styled-components";
 
 const Badges = styled.div`

@@ -89,6 +89,16 @@ export default function Org() {
                             </ul>
                         </div>
                     </div>
+                    <div className="border-bottom px-2 px-md-3 py-2 d-flex align-items-start">
+                        <div className="rounded fs-6 fw-bold d-inline-block py-1 px-2 px-md-3 mt-2 bg-blue-light text-primary mt-1">국장</div>
+                        <div className="fw-bold text-blue-dark mt-2 col-3 col-lg-2 text-center">소정혜</div>
+                        <div className="col-7 col-lg-8">
+                            <ul className="p-0">
+                                <li className="py-2">- 한국접근성평가연구원 국장</li>
+                                <li className="py-2">- KEA/NIA/국가기술표준원 전문위원</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </Container>
         </Section>
