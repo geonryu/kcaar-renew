@@ -12,6 +12,7 @@ export default function KioskEval() {
                     {"tit" : "접근성시험평가", "to" : "/evaluation/accessibility", "isActive": "false", "key": "accessibility" },
                     {"tit" : "키오스크접근성시험평가", "to" : "/evaluation/kiosk", "isActive": "true", "key": "kiosk" },
                     {"tit" : "가전접근성시험평가", "to" : "/evaluation/appliance", "isActive": "false", "key": "appliance" },
+                    {"tit" : "모바일접근성시험평가", "to" : "/evaluation/mobile", "isActive": "false", "key": "mobile" },
                 ]}
             ></LocalNavigation>
             <KioskProcess></KioskProcess>

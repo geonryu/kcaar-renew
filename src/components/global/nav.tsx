@@ -92,6 +92,7 @@ export default function GlovalNavigation(props: any) {
                 {subtitle: "Accessibility", to: "/evaluation/accessibility", key: "nav2-1", ko: "접근성시험평가란?", ko2: "",},
                 {subtitle: "Kiosk", to: "/evaluation/kiosk", key: "nav2-2", ko: "키오스크", ko2: "접근성시험평가",},
                 {subtitle: "Appliances", to: "/evaluation/appliance", key: "nav2-3", ko: "가전", ko2: "접근성시험평가",},
+                {subtitle: "Appliances", to: "/evaluation/mobile", key: "nav2-4", ko: "모바일", ko2: "접근성시험평가",},
             ]
         },
         {

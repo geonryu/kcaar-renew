@@ -29,26 +29,26 @@ const IcoThumb = styled.div`
     }
 `;
 
-const Download = styled.div`
-    width: max-content;
-    & a {
-        border: 1px solid rgb(0, 122, 255);
-        color: rgb(0, 122, 255);
-    }
+// const Download = styled.div`
+//     width: max-content;
+//     & a {
+//         border: 1px solid rgb(0, 122, 255);
+//         color: rgb(0, 122, 255);
+//     }
 
-    &:hover a{
-        color: rgb(255,255,255);
-        background-color: rgb(0, 122, 255);
-    }
-`;
+//     &:hover a{
+//         color: rgb(255,255,255);
+//         background-color: rgb(0, 122, 255);
+//     }
+// `;
 
-export default function KioskProcess() {
+export default function MobileProcess() {
     return (
         <Section className="py-5">
             <Container>
-                <Heading labelTxt={"Process for Kiosk Accessibility Evaluation"} titTxt1={`우선구매대상 무인정보단말기 접근성 심사평가 절차`} titTxt2={""} txtAlign={"center"}/>
+                <Heading labelTxt={"Process for Mobile Accessibility Evaluation"} titTxt1={`모바일 접근성 심사평가 절차`} titTxt2={""} txtAlign={"center"}/>
                 <div className="text-center col-12 col-md-10 mx-auto">
-                    사단법인 한국접근성평가연구원에 과기정통부의 “우선구매 대상 지능정보제품 시험평가 지침”에 의한 무인정보단말기(kiosk) 접근성 심사평가를 의뢰하면 다음과 같은 절차에 의해서 진행됩니다.
+                    사단법인 한국접근성평가연구원의 모바일 접근성 심사평가를 의뢰하면 다음과 같은 절차에 의해서 진행됩니다.
                 </div>
                 <Row className="mt-5">
                     <Col xs={12} className="py-5 px-3 px-lg-5 bg-blue-light mb-3">
@@ -61,9 +61,9 @@ export default function KioskProcess() {
                                 <li className="mb-2">신청 기관 담당자가 홈페이지에서 로그인하여 직접 신청</li>
                                 <li>제출서류: 시험평가신청서, 제품설명서, 사용자취급설명서</li>
                             </Process>
-                            <Download>
+                            {/* <Download>
                                 <a href="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/docs%2F%E1%84%8B%E1%85%AE%E1%84%89%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AE%E1%84%86%E1%85%A2%E1%84%83%E1%85%A2%E1%84%89%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A6%E1%84%91%E1%85%AE%E1%86%B7%20%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A7%E1%86%BC%E1%84%80%E1%85%A1%20%E1%84%89%E1%85%B5%E1%86%AB%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%89%E1%85%A5.pdf?alt=media&amp;token=ddeffadf-bee0-48fb-9c29-88493373e904" download="우선구매대상지능정보제품 시험평가 신청서" target="_blank" className="d-flex align-items-center py-2 px-3 rounded-pill fs-6 fw-bold"><span className="material-symbols-outlined me-2 d-block">download</span>[PDF] 신청서 내려받기</a>
-                            </Download>
+                            </Download> */}
                         </div>
                     </Col>
                     <Col xs={12} className="py-5 px-3 px-lg-5 mb-3">
@@ -92,7 +92,7 @@ export default function KioskProcess() {
                                 <li className="fs-6 text-primary">※ 연구원에서는 신청 기관의 접근성 심사평가 결과를 외부에 공표하지 않으며, 접근성 심사평가 결과에 대한 일체의 인증을 직접 제공하지 않음</li>
                             </ul>
                         </div>
-                        <Download><a href="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/docs%2F%E1%84%87%E1%85%A7%E1%86%AF%E1%84%91%E1%85%AD4.%20%E1%84%8B%E1%85%AE%E1%84%89%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AE%E1%84%86%E1%85%A2%E1%84%83%E1%85%A2%E1%84%89%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A6%E1%84%91%E1%85%AE%E1%86%B7%20%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A7%E1%86%BC%E1%84%80%E1%85%A1%20%E1%84%89%E1%85%A6%E1%84%87%E1%85%AE%E1%84%80%E1%85%B5%E1%84%8C%E1%85%AE%E1%86%AB.pdf?alt=media&amp;token=cda4a93e-b6fa-4105-81e6-455562b3ca43" download="우선구매대상지능정보제품 시험평가 신청서" target="_blank" className="d-flex align-items-center py-2 px-3 rounded-pill fs-6 fw-bold"><span className="material-symbols-outlined me-2 d-block">download</span>[PDF] 평가 세부기준 내려받기</a></Download>
+                        {/* <Download><a href="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/docs%2F%E1%84%87%E1%85%A7%E1%86%AF%E1%84%91%E1%85%AD4.%20%E1%84%8B%E1%85%AE%E1%84%89%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AE%E1%84%86%E1%85%A2%E1%84%83%E1%85%A2%E1%84%89%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A6%E1%84%91%E1%85%AE%E1%86%B7%20%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A7%E1%86%BC%E1%84%80%E1%85%A1%20%E1%84%89%E1%85%A6%E1%84%87%E1%85%AE%E1%84%80%E1%85%B5%E1%84%8C%E1%85%AE%E1%86%AB.pdf?alt=media&amp;token=cda4a93e-b6fa-4105-81e6-455562b3ca43" download="우선구매대상지능정보제품 시험평가 신청서" target="_blank" className="d-flex align-items-center py-2 px-3 rounded-pill fs-6 fw-bold"><span className="material-symbols-outlined me-2 d-block">download</span>[PDF] 평가 세부기준 내려받기</a></Download> */}
                     </Col>
                     <Col xs={12} className="py-5 px-3 px-lg-5">
                         <IcoThumb className="rounded-4 bg-blue-light p-3"><img src="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fprocess4.png?alt=media&token=a6c48538-2f1c-43d7-8ac0-24ca01b9d59b" alt="" /></IcoThumb>

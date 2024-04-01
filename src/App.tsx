@@ -29,6 +29,7 @@ import ForgotId from "./routes/forgotId";
 import ForgotPassword from "./routes/forgotPw";
 import BannerManage from "./components/admin/bannerAdmin";
 import Report from "./components/admin/reportAdmin";
+import Mobile from "./pages/evaluation/mobile";
 
 const router = createBrowserRouter([
     {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
                     {
                         path: "/evaluation/appliance",
                         element: <ApplianceEval />
+                    },
+                    {
+                        path: "/evaluation/mobile",
+                        element: <Mobile />
                     },
                 ]
             },

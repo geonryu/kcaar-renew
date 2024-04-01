@@ -13,6 +13,7 @@ export default function Accessibility() {
                     {"tit" : "접근성시험평가", "to" : "/evaluation/accessibility", "isActive": "true", "key": "accessibility" },
                     {"tit" : "키오스크접근성시험평가", "to" : "/evaluation/kiosk", "isActive": "false", "key": "kiosk" },
                     {"tit" : "가전접근성시험평가", "to" : "/evaluation/appliance", "isActive": "false", "key": "appliance" },
+                    {"tit" : "모바일접근성시험평가", "to" : "/evaluation/mobile", "isActive": "false", "key": "mobile" },
                 ]}
             ></LocalNavigation>
             <EvaluationSummary></EvaluationSummary>
