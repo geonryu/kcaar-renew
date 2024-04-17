@@ -38,9 +38,7 @@ const HeaderWrap = styled.div``;
 const Logo = styled.h1``;
 const BtnNav = styled.div`
     width: 35px; height: 35px;
-    & .navbar-toggler{
-        width: 100%; height: 100%; font-size: 0; position: relative;}
-    }
+    & .navbar-toggler{width: 100%; height: 100%; font-size: 0; position: relative;}
     & .navbar-toggler::before{content: ''; display: block; width: 28px; height: 2px; background-color: #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -9px);}
     & .navbar-toggler span{display: block; width: 28px; height: 2px; background-color: #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
     & .navbar-toggler::after{content: ''; display: block; width: 28px; height: 2px; background-color: #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, 7px);}
@@ -51,7 +49,7 @@ const BtnNav = styled.div`
 
 export default function GlobalHeader() {
     const [navBtn, setNavBtn] = useState(false);
-    const onClickNavBtn = () => {
+    const onClickNavBtn = () => { 
         !navBtn ? setNavBtn(true) : setNavBtn(false);
     }
     
