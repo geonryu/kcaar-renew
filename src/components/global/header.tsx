@@ -11,7 +11,7 @@ const Header = styled.header`
     @media (min-width: 992px) {
         overflow: hidden;
 
-        &.active{height: 330px}
+        &.active{height: 400px;}
         & .sub{
             display: block !important;
             height: unset;

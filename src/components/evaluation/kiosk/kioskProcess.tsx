@@ -56,7 +56,10 @@ export default function KioskProcess() {
                         <h3 className="fw-bold justify-content-center text-primary mt-3">1. 신청서접수</h3>
                         <div className="text-start">
                             <Process className="p-0 col-11">
-                                <li className="mb-2">연구원 홈페이지 및 이메일로 신청 가능</li>
+                                <li className="mb-2">
+                                    연구원 홈페이지 및&nbsp; 
+                                    <a href="mailto:kcaar@kcaa.re.kr" className="text-decoration-underline text-primary fw-bold">이메일</a>로 신청 가능
+                                </li>
                                 <li className="mb-2">신규신청 및 갱신신청 구분 신청 </li>
                                 <li className="mb-2">신청 기관 담당자가 홈페이지에서 로그인하여 직접 신청</li>
                                 <li>제출서류: 시험평가신청서, 제품설명서, 사용자취급설명서</li>
@@ -99,7 +102,10 @@ export default function KioskProcess() {
                         <h3 className="fw-bold fw-bold justify-content-center text-primary mt-3">4. 추천</h3>
                         <div className="text-start">
                             <Process className="p-0 col-11">
-                                <li className="mb-2">연구원 홈페이지 및 이메일로 신청 가능</li>
+                                <li className="mb-2">
+                                    연구원 홈페이지 및&nbsp; 
+                                    <a href="mailto:kcaar@kcaa.re.kr" className="text-decoration-underline text-primary fw-bold">이메일</a>로 신청 가능
+                                </li>
                                 <li className="mb-2">신규신청 및 갱신신청 구분 신청 </li>
                                 <li className="mb-2">신청 기관 담당자가 홈페이지에서 로그인하여 직접 신청</li>
                                 <li>제출서류: 시험평가신청서, 제품설명서, 사용자취급설명서</li>
