@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import LocalNavigation from "../../components/global/localnavigation";
 import ApplianceProcess from "../../components/evaluation/appliance/applianceProcess";
-import ApplianceReport from "../../components/evaluation/appliance/applianceReport";
 
 const Wrap = styled.div``;
 
@@ -17,7 +16,6 @@ export default function ApplianceEval() {
                 ]}
             ></LocalNavigation>
             <ApplianceProcess />
-            <ApplianceReport />
         </Wrap>
     )
 }

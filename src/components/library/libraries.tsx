@@ -36,6 +36,9 @@ const Title = styled.div`
 
 `;
 
+// const List = styled.div``;
+// const Btn = styled.button``;
+
 export default function Libraries() {
     const [library, setLibrary] = useState<any[]>([]);
     useEffect(() => {
@@ -66,6 +69,8 @@ export default function Libraries() {
                 <Row>
                     {
                         library.map((list, i) => {
+                            console.log(list);
+
                             const crtAt = new Date(list.createdAt);
                             let yy = crtAt.getFullYear();
                             let mm:any = crtAt.getMonth() + 1;
