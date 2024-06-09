@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import LocalNavigation from "../../components/global/localnavigation";
 import MobileProcess from "../../components/evaluation/mobile/mobileProcess";
+import MobileCertSystem from "../../components/evaluation/mobile/mobileCertSystem";
 
 const Wrap = styled.div``;
 
@@ -15,7 +16,8 @@ export default function Mobile() {
                     {"tit" : "모바일접근성시험평가", "to" : "/evaluation/mobile", "isActive": "true", "key": "mobile" },
                 ]}
             ></LocalNavigation>
-            <MobileProcess></MobileProcess>
+            <MobileCertSystem />
+            <MobileProcess />
         </Wrap>
     )
 }
