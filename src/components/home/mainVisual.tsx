@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import 'swiper/css';
@@ -11,24 +12,29 @@ const SliderContent = styled.div`
     height: 320px;
     & .tit {text-shadow: 3px 3px 3px rgba(0,0,0,0.3)}
     &.bn1{
-        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-4.jpg?alt=media&token=cb6db73b-e811-4e25-9b1f-f0b20daed002);
+        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-m5.jpg?alt=media&token=c8524260-c8e0-46e7-a2f7-1cf74d995f83);
     }
     &.bn2{
-        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-m1.jpg?alt=media&token=ed968cbd-fcaf-44f0-abd8-5392cb3e9598);
+        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-4.jpg?alt=media&token=cb6db73b-e811-4e25-9b1f-f0b20daed002);
     }
     &.bn3{
+        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-m1.jpg?alt=media&token=ed968cbd-fcaf-44f0-abd8-5392cb3e9598);
+    }
+    &.bn4{
         background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fa.jpg?alt=media&token=f8b662ee-9d23-4371-8a33-46a680e80bfa);
     }
     @media(min-width: 992px){
         height: 380px;
-
         &.bn1{
-            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-4.jpg?alt=media&token=cb6db73b-e811-4e25-9b1f-f0b20daed002);
+            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-img5.jpg?alt=media&token=44b937b2-5df6-4f3b-b091-d997f46e617f);
         }
         &.bn2{
-            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-1.jpg?alt=media&token=fe100266-a9fe-4cf6-ade0-3d7996f5e4aa);
+            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-4.jpg?alt=media&token=cb6db73b-e811-4e25-9b1f-f0b20daed002);
         }
         &.bn3{
+            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-1.jpg?alt=media&token=fe100266-a9fe-4cf6-ade0-3d7996f5e4aa);
+        }
+        &.bn4{
             background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-2.jpg?alt=media&token=dcbdd63a-6d8f-4b5b-91ff-986379578db6);
         }
     }
@@ -70,7 +76,30 @@ export default function MainVisual() {
                     //     },
                 >
                     <SwiperSlide>
-                        <SliderContent className=".slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn1">
+                        <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn1">
+                            <div className="text-content text-center d-flex align-items-center justify-content-center h-100">
+                                <div className="tit fw-bold text-primary-white">
+                                    <div className="fs-2 mb-3">
+                                        모바일 앱 접근성 우수인증제도 시행
+                                    </div>
+                                    {/* <div className="mb-1">식음료무인주문결제기(3.22~4.11) - 접근성 우수제품으로 우선구매 추천, NIA 인증 완료</div> */}
+                                    {/* <div className="mb-1">티켓무인발권기(8.07~9.27) - 접근성 우수제품으로 우선구매 추천, NIA 인증 완료</div> */}
+                                    <div className="mb-5">한국접근성평가연구원(KCAAR)에서는 모바일 앱(App)의 접근성을 검증평가하고 인증을 부여하는 민간인증제도를 시행합니다.</div>
+                                    <div className="text-center text-white fw-bold text-decoration-underline">
+                                        <Link to="/evaluation/mobile">더 알아보기</Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </SliderContent>
+                        <div className="txt fs-5 text-primary-black fw-bold text-center col-md-8 mx-auto mt-3 px-md-2">
+                            모바일 앱 접근성 우수인증은 국가표준으로 지정된 모바일 앱 접근성
+                            검증지침과 국제표준화기구 W3C가 제공하는 모바일 설계기준을 충족하는 앱에 대해서 접근성 우수
+                            인증을 부여하는 제도입니다.<br />한국접근성평가연구원이 부여하는 인증 우수 마크를 앱의 시작화면에 표기할 수
+                            있습니다.
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn2">
                             <div className="text-content text-center d-flex align-items-center justify-content-center h-100">
                                 <div className="tit fw-bold text-primary-white">
                                     <div className="fs-2 mb-3">
@@ -88,7 +117,7 @@ export default function MainVisual() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <SliderContent className="slide-inner px-3 px-md-5 py-5 rounded-4 overflow-hidden bn2">
+                        <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn3">
                             <div className="text-content text-center d-flex align-items-center justify-content-center h-100">
                                 <div className="tit fw-bold text-primary-white fs-1">우선구매대상 지능정보제품<br /> 국내 1호 시험평가기관</div>
                             </div>
@@ -96,7 +125,7 @@ export default function MainVisual() {
                         <div className="txt fs-5 text-primary-black fw-bold text-center col-md-8 mx-auto mt-3 px-md-2">한국접근성평가연구원은 2022년 한국지능정보사회진흥원의 우선구매 대상 지능정보제품(키오스크) 시험평가기관으로 공식 선정되었으며 국내 최초로 키오스크 시험평가를 진행한 기관입니다.</div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn3">
+                        <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn4">
                             <div className="text-content text-center d-flex align-items-center justify-content-center h-100">
                                 <div className="tit fw-bold text-primary-white fs-1">모두를 위한 디자인<br />유니버설(접근성) 디자인의 선구자</div>
                             </div>

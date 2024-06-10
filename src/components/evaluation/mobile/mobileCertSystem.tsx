@@ -9,8 +9,8 @@ export default function MobileCertSystem() {
         <Container>
             <Heading labelTxt={"Mobile Application Certification System"} titTxt1={`모바일 앱 인증제도`} titTxt2={""} txtAlign={"center"}/>
             <Row>
-                <Col xs="6" className="mx-auto"><img className="mx-auto d-block" src="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmob-app-accessibility-mark.svg?alt=media&token=11c0b715-df0f-4ef9-90b3-e06438a30628" alt="" /></Col>
-                <Col xs="12" className="mt-5">
+                <Col xs="6" md="4" lg="2" className="mx-auto"><img className="mx-auto d-block" src="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmob-app-accessibility-mark.svg?alt=media&token=11c0b715-df0f-4ef9-90b3-e06438a30628" alt="" /></Col>
+                <Col xs="12" md="8" lg="10" className="mt-5">
                     한국접근성평가연구원(KCAAR)에서는 모바일 앱(App)의 접근성을 검증평가하고 인증을 부여하는 민간인증제도를 시행합니다.<br/><br/>
                     모바일 앱 접근성 우수인증은 국가표준으로 지정된 모바일 앱 접근성 검증지침과 국제표준화기구 W3C가 제공하는 모바일 설계기준을 충족하는 앱에 대해서 접근성 우수 인증을 부여하는 제도입니다. 검증평가 및 인증 대상은 스마트폰과 태블릿 등에서 제공하는 모든 유형의 앱(웹 기반 앱 포함)이 해당됩니다.<br/><br/>
                     모바일 앱 접근성 우수인증은 2년 또는 새로운 버전을 업그레이드할 때까지 유효하며, 한국접근성평가연구원이 부여하는 인증 우수 마크를 앱의 시작화면에 표기할 수 있습니다. 모바일 앱 접근성 우수인증을 위한 검증평가 기준은 아래의 링크에서 확인할 수 있습니다.
