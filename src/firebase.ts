@@ -4,7 +4,6 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 // import { ReCaptchaV3Provider, initializeAppCheck } from "firebase/app-check";
-
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,
     authDomain: "kcaar-65f39.firebaseapp.com",

@@ -99,16 +99,12 @@ export default function MobileProcess() {
                     </Col>
                     <Col xs={12} className="py-5 px-3 px-lg-5">
                         <IcoThumb className="rounded-4 bg-blue-light p-3"><img src="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fprocess4.png?alt=media&token=a6c48538-2f1c-43d7-8ac0-24ca01b9d59b" alt="" /></IcoThumb>
-                        <h3 className="fw-bold fw-bold justify-content-center text-primary mt-3">4. 추천</h3>
+                        <h3 className="fw-bold fw-bold justify-content-center text-primary mt-3">인증서 발급</h3>
                         <div className="text-start">
                             <Process className="p-0 col-11">
-                                <li className="mb-2">
-                                    연구원 홈페이지 및&nbsp; 
-                                    <a href="mailto:kcaar@kcaa.re.kr" className="text-decoration-underline text-primary fw-bold">이메일</a>로 신청 가능
-                                </li>
-                                <li className="mb-2">신규신청 및 갱신신청 구분 신청 </li>
-                                <li className="mb-2">신청 기관 담당자가 홈페이지에서 로그인하여 직접 신청</li>
-                                <li>제출서류: 시험평가신청서, 제품설명서, 사용자취급설명서</li>
+                                <li className="mb-2">접근성 우수 인증서 및 인증마크 발급</li>
+                                <li className="mb-2">신규 인증 및 인증 갱신으로 구분하여 유효기간과 함께 발급 </li>
+                                <li className="mb-2">신청기관 담당자에게 사용가능한 인증마크 이미지 파일을 제공</li>
                             </Process>
                         </div>
                     </Col>
