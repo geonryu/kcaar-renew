@@ -90,10 +90,6 @@ export default function MobileProcess() {
                                 <li className="mb-2">1차 전문가심사 후 경미한 오류로 불합격 시 수정/보완 기회가 부여되며, 수정/보완 후 2차 전문가심사 및 사용자심사 진행</li>
                                 <li>전문가심사 + 사용자심사 완료 후 결과 통보</li>
                             </Process>
-                            <ul className="p-0 fw-bold mt-2 w-100">
-                                <li className="fs-6 text-primary">※ 결과는 신청 기관과 한국지능정보사회진흥원에 동시 통보됨</li>
-                                <li className="fs-6 text-primary">※ 연구원에서는 신청 기관의 접근성 심사평가 결과를 외부에 공표하지 않으며, 접근성 심사평가 결과에 대한 일체의 인증을 직접 제공하지 않음</li>
-                            </ul>
                         </div>
                         {/* <Download><a href="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/docs%2F%E1%84%87%E1%85%A7%E1%86%AF%E1%84%91%E1%85%AD4.%20%E1%84%8B%E1%85%AE%E1%84%89%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AE%E1%84%86%E1%85%A2%E1%84%83%E1%85%A2%E1%84%89%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A6%E1%84%91%E1%85%AE%E1%86%B7%20%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A7%E1%86%BC%E1%84%80%E1%85%A1%20%E1%84%89%E1%85%A6%E1%84%87%E1%85%AE%E1%84%80%E1%85%B5%E1%84%8C%E1%85%AE%E1%86%AB.pdf?alt=media&amp;token=cda4a93e-b6fa-4105-81e6-455562b3ca43" download="우선구매대상지능정보제품 시험평가 신청서" target="_blank" className="d-flex align-items-center py-2 px-3 rounded-pill fs-6 fw-bold"><span className="material-symbols-outlined me-2 d-block">download</span>[PDF] 평가 세부기준 내려받기</a></Download> */}
                     </Col>
