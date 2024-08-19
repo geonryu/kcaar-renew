@@ -18,10 +18,13 @@ const SliderContent = styled.div`
         background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-4.jpg?alt=media&token=cb6db73b-e811-4e25-9b1f-f0b20daed002);
     }
     &.bn3{
-        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-m1.jpg?alt=media&token=ed968cbd-fcaf-44f0-abd8-5392cb3e9598);
+        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-m2.jpg?alt=media&token=f8b662ee-9d23-4371-8a33-46a680e80bfa);
     }
     &.bn4{
-        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fa.jpg?alt=media&token=f8b662ee-9d23-4371-8a33-46a680e80bfa);
+        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-m1.jpg?alt=media&token=ed968cbd-fcaf-44f0-abd8-5392cb3e9598);
+    }
+    &.bn5{
+        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-2408-m.jpg?alt=media&token=f5bc217e-693a-489e-b56a-644bd498afb3);
     }
     @media(min-width: 992px){
         height: 380px;
@@ -32,10 +35,13 @@ const SliderContent = styled.div`
             background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-4.jpg?alt=media&token=cb6db73b-e811-4e25-9b1f-f0b20daed002);
         }
         &.bn3{
-            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-1.jpg?alt=media&token=fe100266-a9fe-4cf6-ade0-3d7996f5e4aa);
+            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-2.jpg?alt=media&token=dcbdd63a-6d8f-4b5b-91ff-986379578db6);
         }
         &.bn4{
-            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-2.jpg?alt=media&token=dcbdd63a-6d8f-4b5b-91ff-986379578db6);
+            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-1.jpg?alt=media&token=fe100266-a9fe-4cf6-ade0-3d7996f5e4aa);
+        }
+        &.bn5{
+            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-2408.jpg?alt=media&token=addf74b6-0717-4b8a-9142-4026a7dbf20a);
         }
     }
 `;
@@ -75,6 +81,22 @@ export default function MainVisual() {
                     //       spaceBetween: 30,
                     //     },
                 >
+                    <SwiperSlide>
+                        <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn5">
+                            <div className="text-content text-center d-flex align-items-center justify-content-center h-100">
+                                <div className="tit fw-bold text-primary-white">
+                                    <div className="fs-2 mb-3">
+                                        비버웍스 모바일 앱<br/>한국접근성평가연구원 제 1호 접근성 우수 인증 취득
+                                    </div>
+                                    <div className="mb-5">(주)비버웍스(BeaverWorks)의 비버카페 식음료 주문용 QR 코드 모바일 앱이<br/>2024년 8월 한국접근성평가연구원의 접근성 검증 및 심사에 의하여 제 1호 모바일앱 접근성 우수 인증(++)을 취득하였습니다.</div>
+                                </div>
+                            </div>
+                        </SliderContent>
+                        <div className="txt fs-5 text-primary-black fw-bold text-center col-md-8 mx-auto mt-3 px-md-2">
+                            비버카페 대학로점의 식음료 주문용 QR 코드 모바일 앱은 한국모바일접근성 지침이 요구하는 인식, 이해, 운용, 견고성 등의 모든 항목에서 95% 이상의 적합성을 인정받았으며 장애인 사용자의 사용성 또한 우수한 것으로 검증 평가되어, 최우수 등급인 모바일앱 접근성 우수 ++ 등급의 인증을 취득하였습니다. 
+                            (사)한국접근성평가연구원은 W3C의 모바일 접근성 가이드라인 및 지능정보화기본법의 모바일애플리케이션콘텐츠접근성 지침에 따른 엄격하고 공정한 검증 평가를 통하여 우리나라에서 사용되는 모든 모바일 앱의 접근성 향상을 추구합니다.
+                        </div>
+                    </SwiperSlide>
                     <SwiperSlide>
                         <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn1">
                             <div className="text-content text-center d-flex align-items-center justify-content-center h-100">
