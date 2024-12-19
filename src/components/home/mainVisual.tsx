@@ -9,6 +9,13 @@ import { SwiperSlide, Swiper } from "swiper/react";
 
 const Section = styled.section``;
 const SliderContent = styled.div`
+    & .tit > div:nth-child(2){
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+    }
     height: 320px;
     & .tit {text-shadow: 3px 3px 3px rgba(0,0,0,0.3)}
     &.bn1{
@@ -26,7 +33,17 @@ const SliderContent = styled.div`
     &.bn5{
         background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-2408-m.jpg?alt=media&token=f5bc217e-693a-489e-b56a-644bd498afb3);
     }
+    &.bn6{
+        background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-img2412.jpg?alt=media&token=f0106dfa-5604-41d1-b624-90efb6d5638c);
+    }
     @media(min-width: 992px){
+        & .tit > div:nth-child(2){
+            text-overflow: unset;
+            overflow: unset;
+            display: unset;
+            -webkit-box-orient: unset;
+            -webkit-line-clamp: unset;
+        }
         height: 380px;
         &.bn1{
             background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-img5.jpg?alt=media&token=44b937b2-5df6-4f3b-b091-d997f46e617f);
@@ -42,6 +59,9 @@ const SliderContent = styled.div`
         }
         &.bn5{
             background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-2408.jpg?alt=media&token=addf74b6-0717-4b8a-9142-4026a7dbf20a);
+        }
+        &.bn6{
+            background-image : url(https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/default%2Fmain-bn-2412-m.jpg?alt=media&token=cc93313a-0d31-4a8c-a8ca-c3a060010339);
         }
     }
 `;
@@ -81,6 +101,28 @@ export default function MainVisual() {
                     //       spaceBetween: 30,
                     //     },
                 >
+                    <SwiperSlide>
+                        <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn6">
+                            <a target="_blank" href="https://firebasestorage.googleapis.com/v0/b/kcaar-65f39.appspot.com/o/docs%2F1-1_%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%E1%84%89%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%80%E1%85%A9%E1%84%89%E1%85%A5-%E1%84%80%E1%85%A1%E1%84%8C%E1%85%A5%E1%86%ABv00-20240418.pdf?alt=media&token=e66a9981-189f-4c28-90d2-f8ec79cfa67d">
+                                <div className="text-content text-center d-flex align-items-center justify-content-center h-100">
+                                    <div className="tit fw-bold text-primary-white">
+                                        <div className="fs-2 mb-3">
+                                        접근성보고서 제1권 『kiosk 접근성』 발행
+                                        </div>
+                                        <div className="mb-5">
+                                            사단법인 한국접근성평가연구원(KCAAR)에서는 장애인차별금지법에서 명시하고 있는 무인정보단말기를 이용한 재화와 용역의 정당한 편의 제공 실태를 파악하기 위하여 주요 공공시설 및 대형 일반사업장(프랜차이즈)에서의 키오스크 접근성을 검증, 평가하고 그 문제점을 진단하였다.
+                                        </div>
+                                        <div className="text-center text-white fw-bold text-decoration-underline">
+                                            접근성보고서 다운로드(PDF)
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </SliderContent>
+                        <div className="txt fs-5 text-primary-black fw-bold text-center col-md-8 mx-auto mt-3 px-md-2">
+                            한국접근성평가연구원은 과학기술정보통신부 산하 한국지능정보사회진흥원이 지정한 우선구매추천을 위한 무인정보단말기 접근성 검증평가 기관으로 지정된 바 있으며, 본 조사에서도 가능한 범위에서 최대한 동일한 접근성 검증평가 방법을 적용하여 실시하였다. 장애인차별금지법에 기반한 키오스크 접근성 보고서 제1권과, 이와 별도의 부속 문서로 고령자들의 키오스크 접근성을 평가한 보고서 2부(대중교통시설, 식음료매장)를 발간하였다.
+                        </div>
+                    </SwiperSlide>
                     <SwiperSlide>
                         <SliderContent className="slide-inner px-3 px-md-5 py-5 bg-primary rounded-4 overflow-hidden bn5">
                             <div className="text-content text-center d-flex align-items-center justify-content-center h-100">
